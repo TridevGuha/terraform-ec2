@@ -2,3 +2,11 @@ https://dev.to/aws-builders/how-to-create-an-ec2-instance-on-aws-using-terraform
 
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 
+port-apply verify: 
+$ terraform state list  # <-- output: aws_instance.demo_ec2_instance[0]
+$ terraform state show aws_instance.demo_ec2_instance[0]
+$ aws ec2 describe-instances
+
+debug:
+$ aws ec2 describe-instances --debug > debug-ec2.log
+
