@@ -11,6 +11,8 @@ resource "aws_instance" "demo_ec2_instance" {
   subnet_id = "${var.subnet_id}"
   instance_type = "${var.instance_type}"
   key_name =  "${var.ami_key_pair_name}"
+  
+  user_data = "${file("init.sh")}"
 
   tags = {
     Name = "${var.instance_name}"
