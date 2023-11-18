@@ -22,7 +22,7 @@ variable "instance_type" {
 
 variable "subnet_id" {
     description = "The VPC subnet the instance(s) will use -> us-east-1a"
-    default = "subnet-0f6509d7bf223627e"   
+    default = ["subnet-0f6509d7bf223627e"]   
 }
 
 variable "ami_id" {
